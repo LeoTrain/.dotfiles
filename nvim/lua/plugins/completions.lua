@@ -1,4 +1,7 @@
 return {
+    {
+        "github/copilot.vim",
+    },
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
 	dependencies = {
@@ -15,11 +18,22 @@ return {
 		"onsails/lspkind.nvim",
 	},
 	config = function()
-		local cmp = require("cmp")
-		local luasnip = require("luasnip")
-		local lspkind = require("lspkind")
+        local cmp_status_ok, cmp = pcall(require, "cmp")
+        if not cmp_status_ok then
+            return
+        end
 
-		require("luasnip.loaders.from_vscode").lazy_load()
+        local luasnip_status_ok, luasnip = pcall(require, "luasnip")
+        if not luasnip_status_ok then
+            return
+        end
+
+        local lspkind_status_ok, lspkind = pcall(require, "lspkind")
+        if not lspkind_status_ok then
+            return
+        end
+
+        require("luasnip.loaders.from_vscode").lazy_load()
 
 		cmp.setup({
 			window = {
@@ -61,7 +75,6 @@ return {
             }),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" }, -- LSP source
-				{ name = "luasnip" },
 				{ name = "buffer" },
 				{ name = "path" },
 			}),
