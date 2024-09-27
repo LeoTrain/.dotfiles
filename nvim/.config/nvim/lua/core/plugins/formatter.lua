@@ -17,6 +17,7 @@ return {
 				markdown = { "prettier" },
 				lua = { "stylua" },
 				python = { "isort", "black" },
+                                csharp = { "dotnet-format" },
 			},
 			stop_after_first = {
 				python = false,

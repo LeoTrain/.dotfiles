@@ -16,6 +16,7 @@ return {
 				"jsonls",
 				"pyright",
 				"tailwindcss",
+                                "omnisharp",
 			},
 		})
 

@@ -1,0 +1,22 @@
+[font]
+size = 32.0
+
+[window]
+decorations = "None"
+opacity = 0.9
+
+[font.bold]
+family = "3270 Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "3270 Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "3270 Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "3270 Nerd Font"
+style = "Regular"
