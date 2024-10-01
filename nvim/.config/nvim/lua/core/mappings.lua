@@ -15,6 +15,12 @@ map("i", "df", "<ESC>")
 map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
 map("n", "<leader>r", "<CMD>Neotree focus<CR>")
 
+map("n", "<leader>to", "<cmd>tabnew<CR>")
+map("n", "<leader>tx", "<cmd>tabclose<CR>")
+map("n", "<leader>tn", "<cmd>tabn<CR>")
+map("n", "<leader>tp", "<cmd>tabp<CR>")
+map("n", "<leader>tf", "<cmd>tabnew %<CR>")
+
 -- New Windows
 map("n", "<leader>o", "<CMD>vsplit<CR>")
 map("n", "<leader>p", "<CMD>split<CR>")
