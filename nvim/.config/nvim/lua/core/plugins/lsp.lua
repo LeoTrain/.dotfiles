@@ -85,6 +85,14 @@ return {
 					},
 				})
 			end,
+			["omnisharp"] = function()
+				nvim_lsp["omnisharp"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+					cmd = { "omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) },
+					root_dir = nvim_lsp.util.root_pattern("*.csproj", "*.sln", ".git"),
+				})
+			end,
 		})
 	end,
 }

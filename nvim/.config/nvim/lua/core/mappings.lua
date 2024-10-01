@@ -15,6 +15,12 @@ map("i", "df", "<ESC>")
 map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
 map("n", "<leader>r", "<CMD>Neotree focus<CR>")
 
+map("n", "<leader>to", "<cmd>tabnew<CR>")
+map("n", "<leader>tx", "<cmd>tabclose<CR>")
+map("n", "<leader>tn", "<cmd>tabn<CR>")
+map("n", "<leader>tp", "<cmd>tabp<CR>")
+map("n", "<leader>tf", "<cmd>tabnew %<CR>")
+
 -- New Windows
 map("n", "<leader>o", "<CMD>vsplit<CR>")
 map("n", "<leader>p", "<CMD>split<CR>")
@@ -24,3 +30,11 @@ map("n", "<leader>h", "<C-w>h")
 map("n", "<leader>l", "<C-w>l")
 map("n", "<leader>k", "<C-w>k")
 map("n", "<leader>j", "<C-w>j")
+
+-- Debugger
+vim.keymap.set('n', '<leader>db', function() require'dap'.toggle_breakpoint() end)  -- Ajouter/enlever un breakpoint
+vim.keymap.set('n', '<leader>dc', function() require'dap'.continue() end)           -- Continuer l'exécution
+vim.keymap.set('n', '<leader>do', function() require'dap'.step_over() end)          -- Step over
+vim.keymap.set('n', '<leader>di', function() require'dap'.step_into() end)          -- Step into
+vim.keymap.set('n', '<leader>du', function() require'dap'.step_out() end)           -- Step out
+
