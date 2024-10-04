@@ -51,8 +51,14 @@ require('packer').startup(function(use)
     'hrsh7th/cmp-cmdline',  -- Source pour la ligne de commande
     'saadparwaiz1/cmp_luasnip', -- Snippet completions
     'L3MON4D3/LuaSnip'      -- Gestion des snippets
+    }
   }
-}
+
+  use {
+    'jose-elias-alvarez/null-ls.nvim',
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
+  use 'mfussenegger/nvim-dap'
 
   use 'rafamadriz/friendly-snippets'
   -- Automatically set up your configuration after cloning packer.nvim
