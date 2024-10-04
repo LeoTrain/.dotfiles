@@ -33,6 +33,15 @@ require('packer').startup(function(use)
     'lewis6991/gitsigns.nvim',
     requires = { 'nvim-lua/plenary.nvim' }
   }
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }  -- Pour les icônes
+  }
+  use 'neovim/nvim-lspconfig'
+  use {
+    'williamboman/mason.nvim',  -- Gestionnaire d'installation de LSP
+    requires = { 'williamboman/mason-lspconfig.nvim' }
+  }
 
 
   -- Automatically set up your configuration after cloning packer.nvim
