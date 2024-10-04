@@ -42,6 +42,17 @@ require('packer').startup(function(use)
     'williamboman/mason.nvim',  -- Gestionnaire d'installation de LSP
     requires = { 'williamboman/mason-lspconfig.nvim' }
   }
+  use {
+  'hrsh7th/nvim-cmp', -- Plugin principal pour l'autocomplétion
+  requires = {
+    'hrsh7th/cmp-nvim-lsp', -- Source pour LSP
+    'hrsh7th/cmp-buffer',   -- Source pour les buffers ouverts
+    'hrsh7th/cmp-path',     -- Source pour les chemins de fichiers
+    'hrsh7th/cmp-cmdline',  -- Source pour la ligne de commande
+    'saadparwaiz1/cmp_luasnip', -- Snippet completions
+    'L3MON4D3/LuaSnip'      -- Gestion des snippets
+  }
+}
 
 
   -- Automatically set up your configuration after cloning packer.nvim
