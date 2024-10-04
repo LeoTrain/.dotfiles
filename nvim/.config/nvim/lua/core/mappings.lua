@@ -8,6 +8,9 @@ map("n", "<leader>w", "<CMD>update<CR>")
 -- Quit
 map("n", "<leader>q", "<CMD>q<CR>")
 
+-- Save and Quit all
+map("n", "<leader>wq", "<CMD>wqa<CR>")
+
 -- Exit insert mode
 map("i", "df", "<ESC>")
 

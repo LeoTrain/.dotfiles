@@ -32,6 +32,14 @@ return {
 					capabilities = capabilities,
 				})
 			end,
+			["omnisharp"] = function()
+				nvim_lsp["omnisharp"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+					cmd = { vim.fn.stdpath('data') .. "/mason/bin/omnisharp" },
+					enable_editorconfig_support = true,
+				})
+			end,
 			["cssls"] = function()
 				nvim_lsp["cssls"].setup({
 					on_attach = on_attach,

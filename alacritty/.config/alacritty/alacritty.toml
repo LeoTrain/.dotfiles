@@ -1,5 +1,9 @@
 [font]
+<<<<<<< HEAD
 size = 28.0
+=======
+size = 24.0
+>>>>>>> 1718526fb898cae4d3f415030a1fa0a80cbf493d
 
 [window]
 decorations = "None"

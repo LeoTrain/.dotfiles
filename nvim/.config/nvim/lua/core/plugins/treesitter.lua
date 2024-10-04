@@ -4,9 +4,15 @@ return {
     build = ":TSUpdate",
     dependencies = {
         "windwp/nvim-ts-autotag",
+        "kyazdani42/nvim-web-devicons",
     },
     config = function()
         local treesitter = require("nvim-treesitter.configs")
+        local devicons = require("nvim-web-devicons")
+
+        devicons.setup({
+
+                })
 
         treesitter.setup({
             highlight = {
