@@ -5,13 +5,17 @@ local null_ls = require("null-ls")
 null_ls.setup({
 	sources = {
 		-- C/C++
-		null_ls.builtins.formatting.clang_format,
+		null_ls.builtins.formatting.clang_format.with({
+			extra_args = { "--style=file" }, -- Utilise les configurations de style à partir d'un fichier (par exemple .editorconfig ou .clang-format)
+		}),
 
 		-- Python
 		null_ls.builtins.formatting.black,
 
 		-- JavaScript, TypeScript, HTML, CSS
-		null_ls.builtins.formatting.prettier,
+		null_ls.builtins.formatting.prettier.with({
+			extra_args = { "--plugin=prettier-plugin-editorconfig" }, -- Assure que Prettier respecte .editorconfig
+		}),
 
 		-- Lua
 		null_ls.builtins.formatting.stylua,
@@ -21,9 +25,11 @@ null_ls.setup({
 	},
 
 	-- Formater automatiquement à chaque sauvegarde
-	-- on_attach = function(client, bufnr)
-	--   if client.server_capabilities.documentFormattingProvider then
-	--     vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
-	--   end
-	-- end,
+	on_attach = function(client, bufnr)
+		-- Vérifie si le serveur supporte le formatage
+		if client.server_capabilities.documentFormattingProvider then
+			-- Autoformat avant chaque sauvegarde
+			vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format({ async = true })")
+		end
+	end,
 })

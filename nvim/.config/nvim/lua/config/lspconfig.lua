@@ -16,10 +16,10 @@ local lspconfig = require('lspconfig')
 
 lspconfig.clangd.setup{}
 lspconfig.omnisharp.setup{
-  cmd = { "omnisharp" },  -- Assure-toi d'avoir installé Omnisharp via dotnet
+  cmd = { "omnisharp" },  -- Assure-toi d'avoir installé OmniSharp
   on_attach = function(client, bufnr)
-    if client.resolved_capabilities.document_formatting then
-      vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+    if client.server_capabilities.documentFormattingProvider then
+      vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format({ async = true })")
     end
   end
 }
@@ -37,7 +37,7 @@ lspconfig.lua_ls.setup{
 }
 lspconfig.vimls.setup{
   on_attach = function(client, bufnr)
-    if client.resolved_capabilities.document_formatting then
+    if client.server_capabilities.document_formatting then
       vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
     end
   end
