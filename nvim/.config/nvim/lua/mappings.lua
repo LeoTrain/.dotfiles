@@ -39,3 +39,6 @@ vim.api.nvim_set_keymap(
 	"<cmd>lua vim.lsp.buf.format({ async = true })<CR>",
 	{ noremap = true, silent = true }
 )
+
+
+vim.api.nvim_set_keymap('n', '<leader>r', ':!dotnet run<CR>', { noremap = true, silent = true })
