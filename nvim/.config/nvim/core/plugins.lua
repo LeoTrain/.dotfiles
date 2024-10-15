@@ -7,4 +7,13 @@ return require("packer").startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("mhartington/formatter.nvim")
 	use("neovim/nvim-lspconfig")
+    use("ThePrimeagen/harpoon")
+    use("nvim-treesitter/nvim-treesitter") 
+    use("hrsh7th/nvim-cmp")          -- Plugin principal d'autocomplétion
+    use("hrsh7th/cmp-nvim-lsp")      -- Source LSP pour nvim-cmp
+    use("hrsh7th/cmp-buffer")        -- Source de buffer pour nvim-cmp
+    use("hrsh7th/cmp-path")          -- Source pour compléter les chemins de fichiers
+    use("hrsh7th/cmp-cmdline")       -- Source pour la ligne de commande de Neovim
+    use("L3MON4D3/LuaSnip")          -- Snippets) engine
+    use("saadparwaiz1/cmp_luasnip")  -- Source) pour utiliser LuaSnip avec nvim-cmp
 end)
