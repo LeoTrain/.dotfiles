@@ -22,4 +22,14 @@ return require("packer").startup(function(use)
         "epwalsh/obsidian.nvim",
         tag = "*",  -- recommended, use latest release instead of latest commit
         requires = {"nvim-lua/plenary.nvim"}})
+    use({
+        "folke/which-key.nvim",
+        config = function()
+            require("which-key").setup {}
+        end})
+    use({
+        'kyazdani42/nvim-web-devicons',
+        config = function()
+            require'nvim-web-devicons'.setup()
+        end })
 end)
