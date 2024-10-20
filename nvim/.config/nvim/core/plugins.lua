@@ -32,4 +32,13 @@ return require("packer").startup(function(use)
         config = function()
             require'nvim-web-devicons'.setup()
         end })
+    use({
+        'goolord/alpha-nvim',
+        requires = {
+            'echasnovski/mini.icons',
+            'nvim-lua/plenary.nvim'
+            },
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.dashboard'.config)
+        end })
 end)
