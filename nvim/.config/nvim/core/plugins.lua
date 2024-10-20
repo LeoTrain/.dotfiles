@@ -16,4 +16,10 @@ return require("packer").startup(function(use)
     use("hrsh7th/cmp-cmdline")       -- Source pour la ligne de commande de Neovim
     use("L3MON4D3/LuaSnip")          -- Snippets) engine
     use("saadparwaiz1/cmp_luasnip")  -- Source) pour utiliser LuaSnip avec nvim-cmp
+    use("williamboman/mason.nvim")
+    use("williamboman/mason-lspconfig.nvim")
+    use({
+        "epwalsh/obsidian.nvim",
+        tag = "*",  -- recommended, use latest release instead of latest commit
+        requires = {"nvim-lua/plenary.nvim"}})
 end)
