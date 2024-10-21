@@ -3,8 +3,18 @@ window:
   decorations: None
 
 font:
-  size: 24.0
+  normal:
+    family: "Hack Nerd Font"
+    size: 100.0
 
+  bold:
+    family: "Hack Nerd Font"
+
+  italic:
+    family: "Hack Nerd Font"
+    
+  bold_italic:
+    family: "Hack Nerd Font"
 
 schemes:
   gruvbox_material_hard_dark: &gruvbox_material_hard_dark
