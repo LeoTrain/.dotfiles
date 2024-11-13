@@ -10,7 +10,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "pyright" },
+                ensure_installed = { "lua_ls", "pyright", "clangd", "omnisharp" },
                 automatic_installation = true,
             })
         end,
@@ -46,6 +46,24 @@ return {
             lspconfig.pyright.setup({
                 on_attach = on_attach,
                 capabilities = capabilities,
+            })
+
+            lspconfig.clangd.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+
+            lspconfig.omnisharp.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+                cmd = { "omnisharp" },
+                settings = {
+                    omnisharp = {
+                        enableRoslynAnalyzers = true,
+                        organizeImportsOnFormat = true,
+                        enableEditorConfigSupport = true,
+                    },
+                },
             })
 
         end,
