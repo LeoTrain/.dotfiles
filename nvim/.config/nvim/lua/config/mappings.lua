@@ -1,9 +1,14 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
+map("n", "<leader>w", ":w<cr>", opts)
+map("n", "<leader>q", ":q<cr>", opts)
+
+
 -- return to normal mode
 map("i", "df", "<ESC>", opts)
 
+-- Window Management
 map("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
 map("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
 map("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
