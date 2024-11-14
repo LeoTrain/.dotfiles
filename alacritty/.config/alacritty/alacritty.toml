@@ -24,7 +24,7 @@ background = "#1d2021"
 foreground = "#d4be98"
 
 [font]
-size = 24.0
+size = 20.0
 normal.family = "Hack Nerd Font"
 bold.family = "Hack Nerd Font"
 italic.family = "Hack Nerd Font"
@@ -32,5 +32,5 @@ bold_italic.family = "Hack Nerd Font"
 
 [window]
 decorations = "None"
-opacity = 0.95
+opacity = 1.00
 
