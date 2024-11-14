@@ -2,7 +2,7 @@ local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 map("n", "<leader>w", ":w<cr>", opts)
-map("n", "<leader>q", ":q<cr>", opts)
+map("n", "<leader>q", ":tabclose", opts)
 
 
 -- return to normal mode
