@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIRECTORY=$(find ~/lab/bubuks -type f -not -path "*/.git/*" | fzf)
+DIRECTORY=$(find ~/lab/git/dotfiles/bubuks -type f -not -path "*/.git/*" | fzf)
 
-source ~/lab/env/bin/activate
+source ~/env/bin/activate
 epy "$DIRECTORY"
