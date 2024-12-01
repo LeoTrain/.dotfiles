@@ -1,4 +1,3 @@
-require("config.lazy")
-require("config.settings")
-require("config.mappings")
-require("config.git");
+require("ftleo.config.options")
+require("ftleo.config.keymaps")
+require("ftleo.config.lazy")
