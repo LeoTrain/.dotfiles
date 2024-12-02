@@ -2,6 +2,9 @@ window:
   opacity: 0.95
   decorations: None
 
+cursor:
+  style: Block
+
 font:
   normal:
     family: "Hack Nerd Font"

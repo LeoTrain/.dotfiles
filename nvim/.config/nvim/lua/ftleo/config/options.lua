@@ -9,6 +9,7 @@ opt.wrap = false
 opt.scrolloff = 10
 opt.sidescrolloff = 20
 opt.termguicolors = true
+opt.guicursor = "a:None"
 
 -- Indentation
 opt.expandtab = true
