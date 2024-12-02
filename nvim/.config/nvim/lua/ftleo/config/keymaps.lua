@@ -3,3 +3,7 @@ vim.g.mapleader = " "
 
 keymap('i', 'df', '<ESC>', {})
 keymap('n', '<leader>e', ':Ex<CR>', {})
+
+keymap('n', '<leader>n', ':bn<CR>', { noremap = true, desc = "Buffer next"})
+keymap('n', '<leader>p', ':bp<CR>', { noremap = true, desc = "Buffer previous"})
+keymap('n', '<leader>x', ':bd<CR>', { noremap = true, desc = "Buffer delete"})

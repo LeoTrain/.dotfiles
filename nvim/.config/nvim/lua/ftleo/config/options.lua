@@ -31,7 +31,7 @@ opt.undofile = true
 opt.updatetime = 300
 
 -- Performance
-opt.lazyredraw = true
+opt.lazyredraw = false
 opt.timeoutlen = 500
 opt.ttimeoutlen = 10
 opt.redrawtime = 10000
