@@ -93,4 +93,32 @@ return {
             require("luasnip.loaders.from_vscode").lazy_load()
         end,
     },
+    -- Formatter
+    {
+    "jose-elias-alvarez/null-ls.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+        local null_ls = require("null-ls")
+        null_ls.setup({
+            sources = {
+                -- Formatters
+                null_ls.builtins.formatting.prettier.with({ filetypes = { "javascript", "typescript", "css", "html", "json", "markdown" } }),
+                null_ls.builtins.formatting.black,    -- Python
+                null_ls.builtins.formatting.stylua,   -- Lua
+                null_ls.builtins.formatting.shfmt,    -- Shell scripts
+
+                -- Linters (facultatif)
+                null_ls.builtins.diagnostics.eslint_d, -- JavaScript/TypeScript
+                null_ls.builtins.diagnostics.flake8,   -- Python
+            },
+            on_attach = function(client, bufnr)
+                if client.supports_method("textDocument/formatting") then
+                    vim.keymap.set("n", "<leader>ft", function()
+                        vim.lsp.buf.format({ async = true })
+                    end, { buffer = bufnr, desc = "[LSP] Format buffer" })
+                end
+            end,
+        })
+    end,
+},
 }
