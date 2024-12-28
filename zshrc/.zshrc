@@ -17,20 +17,27 @@ source <(fzf --zsh)
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
+# Enable vi mode
+# bindkey -v
+
 alias zshconf="nvim ~/.zshrc"
 alias src="source ~/.zshrc"
-
-alias conBandit="ssh bandit\$@@bandit.labs.overthewire.org -p 2220"
-alias vault="cd ~/lab/vault && nvim"
-alias run="sh ./scripts/run.sh"
 
 alias ls="eza"
 alias ll="eza -alh"
 alias tree="eza --tree"
-
 alias cd="z"
 
-alias stowrc="stow -d ~/lab/git/dotfiles -t ~" 
+alias ga="git add ."
+alias gs="git status"
+alias gc="git commit -m"
+alias gp="git push origin"
+
+alias publicIp="curl ifconfig.me"
+alias localIp="ipconfig getifaddr en0"
+
+
+alias mini='~/mini-moulinette/mini-moul.sh'
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/powerlevel10k/powerlevel10k.zsh-theme
@@ -46,4 +53,22 @@ if [ -f "/Users/ftl/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/ftl/.
 export PATH=$PATH:$HOME/.local/bin
 export PYTHONPATH=$PYTHONPATH:$HOME/.local/pipx/venvs/pandas/lib/pythonX.X/site-packages
 
+# FZF
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# C#
+export PATH="$PATH:/Users/ftl/.dotnet/tools"
+
+# tdf
+export PATH="$PATH:/Users/ftl/git/tdf/target/release"
+
+# Omnisharp
+export PATH="$PATH:~/.local/share/nvim/mason/packages/omnisharp"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/ftl/.cache/lm-studio/bin"
+
+# tmux sessionizer
+PATH="$PATH":"$HOME/.local/scripts/"
+bindkey -s ^f "tmux-sessionizer\n"kd
