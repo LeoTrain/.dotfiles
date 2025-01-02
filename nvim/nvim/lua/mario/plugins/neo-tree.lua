@@ -9,6 +9,7 @@ return {
     config = function()
         require("neo-tree").setup({
             close_if_last_window = true,
+            popup_border_style = "rounded",
             diagnostics = {
                 enable = true,
                 show_on_dirs = true,
