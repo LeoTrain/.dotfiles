@@ -28,6 +28,7 @@ alias ll="eza -alh"
 alias tree="eza --tree"
 alias cd="z"
 
+alias lg="lazygit"
 alias ga="git add ."
 alias gs="git status"
 alias gc="git commit -m"
@@ -35,7 +36,6 @@ alias gp="git push origin"
 
 alias publicIp="curl ifconfig.me"
 alias localIp="ipconfig getifaddr en0"
-
 
 alias mini='~/mini-moulinette/mini-moul.sh'
 
