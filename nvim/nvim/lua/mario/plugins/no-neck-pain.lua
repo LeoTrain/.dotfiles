@@ -3,6 +3,9 @@ return {
 	version = "*",
 	config = function()
 		require("no-neck-pain").setup({
+            autocmds = {
+                enableOnVimEnter = true,
+            },
 			buffers = {
 				scratchPad = {
 					enabled = true,
