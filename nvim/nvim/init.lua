@@ -1,2 +1,1 @@
-require("ftleo")
-print("hello")
+require("mario")
