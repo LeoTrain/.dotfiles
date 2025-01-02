@@ -1,0 +1,2 @@
+require("ftleo")
+print("hello")
