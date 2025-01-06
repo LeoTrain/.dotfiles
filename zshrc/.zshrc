@@ -11,10 +11,7 @@ ZSH_THEME="robbyrussell"
 
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
-source <(fzf --zsh)
-
-eval "$(fzf --zsh)"
+# eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
 # Enable vi mode
@@ -39,8 +36,7 @@ alias localIp="ipconfig getifaddr en0"
 
 alias mini='~/mini-moulinette/mini-moul.sh'
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -71,4 +67,4 @@ export PATH="$PATH:/Users/ftl/.cache/lm-studio/bin"
 
 # tmux sessionizer
 PATH="$PATH":"$HOME/.local/scripts/"
-bindkey -s ^f "tmux-sessionizer\n"kd
+bindkey -s ^f "tmux-sessionizer\n"
