@@ -49,7 +49,7 @@ class DownloadOrganizer:
         self._add_to_log("Config Loaded.")
 
     def _move_to(self, item, new_path):
-        old_path = os.path.join(self.download_folder, item)
+        old_path = os.path.join(self.download_path, item)
         new_path = os.path.join(new_path, item)
         shutil.move(old_path, new_path)
         self._add_to_log(f"Moving {item} from {old_path} to {new_path}.")
