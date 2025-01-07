@@ -17,6 +17,8 @@ eval "$(zoxide init zsh)"
 # Enable vi mode
 # bindkey -v
 
+alias cldownl="python3 ~/.local/scripts/organize_downloads.py"
+
 alias zshconf="nvim ~/.zshrc"
 alias src="source ~/.zshrc"
 
@@ -26,10 +28,6 @@ alias tree="eza --tree"
 alias cd="z"
 
 alias lg="lazygit"
-alias ga="git add ."
-alias gs="git status"
-alias gc="git commit -m"
-alias gp="git push origin"
 
 alias publicIp="curl ifconfig.me"
 alias localIp="ipconfig getifaddr en0"
