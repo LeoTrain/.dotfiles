@@ -18,21 +18,17 @@ eval "$(zoxide init zsh)"
 # bindkey -v
 
 alias cldownl="python3 ~/.local/scripts/organize_downloads.py"
-
 alias zshconf="nvim ~/.zshrc"
 alias src="source ~/.zshrc"
-
 alias ls="eza"
 alias ll="eza -alh"
 alias tree="eza --tree"
 alias cd="z"
-
 alias lg="lazygit"
-
 alias publicIp="curl ifconfig.me"
 alias localIp="ipconfig getifaddr en0"
-
 alias mini='~/mini-moulinette/mini-moul.sh'
+alias srcenv="source ~/env/bin/activate"
 
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
