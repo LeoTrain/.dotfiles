@@ -41,8 +41,8 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Tabs
 keymap("n", "<leader>to", ":tabnew<CR>", opts)
-keymap("n", "<leader>n", ":tabnext<CR>", opts)
-keymap("n", "<leader>p", ":tabprevious<CR>", opts)
+keymap("n", "<leader>tn", ":tabnext<CR>", opts)
+keymap("n", "<leader>tp", ":tabprevious<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
