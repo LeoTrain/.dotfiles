@@ -71,3 +71,23 @@ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+-- Split window creation
+keymap("n", "<Leader>v", ":vsplit<CR>", { noremap = true, silent = true, desc = "Open a vertical split" })
+keymap("n", "<Leader>h", ":split<CR>", { noremap = true, silent = true, desc = "Open a horizontal split" })
+
+-- Navigate between windows
+keymap("n", "<C-h>", "<C-w>h", { noremap = true, silent = true, desc = "Move to the window on the left" })
+keymap("n", "<C-l>", "<C-w>l", { noremap = true, silent = true, desc = "Move to the window on the right" })
+keymap("n", "<C-j>", "<C-w>j", { noremap = true, silent = true, desc = "Move to the window below" })
+keymap("n", "<C-k>", "<C-w>k", { noremap = true, silent = true, desc = "Move to the window above" })
+
+-- Resize windows
+keymap("n", "<Leader>+", ":resize +2<CR>", { noremap = true, silent = true, desc = "Increase window height" })
+keymap("n", "<Leader>-", ":resize -2<CR>", { noremap = true, silent = true, desc = "Decrease window height" })
+keymap("n", "<Leader><", ":vertical resize -2<CR>", { noremap = true, silent = true, desc = "Decrease window width" })
+keymap("n", "<Leader>>", ":vertical resize +2<CR>", { noremap = true, silent = true, desc = "Increase window width" })
+
+-- Close the current window
+keymap("n", "<Leader>c", ":close<CR>", { noremap = true, silent = true, desc = "Close the active window" })
+
