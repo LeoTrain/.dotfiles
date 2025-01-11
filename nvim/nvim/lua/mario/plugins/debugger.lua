@@ -71,12 +71,12 @@ return {
             },
         }
 
-        vim.keymap.set("n", "<leader>dt", dapui.toggle, {})
-        vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, {})
-        vim.keymap.set("n", "<leader>dc", dap.continue, {})
-        vim.keymap.set("n", "<leader>dso", dap.step_over, {})
-        vim.keymap.set("n", "<leader>dsi", dap.step_into, {})
-        vim.keymap.set("n", "<leader>dsa", dap.step_out, {})
+        vim.keymap.set("n", "<leader>dt", dapui.toggle, {desc="debugger continue"})
+        vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, {desc="breakpoint toggle"})
+        vim.keymap.set("n", "<leader>dc", dap.continue, {desc="debugger continue"})
+        vim.keymap.set("n", "<leader>dso", dap.step_over, {desc="debugger step over"})
+        vim.keymap.set("n", "<leader>dsi", dap.step_into, {desc="debugger step into"})
+        vim.keymap.set("n", "<leader>dsa", dap.step_out, {desc="debugger step out"})
 
         vim.api.nvim_create_user_command('DapLaunchMarioIsaac', function()
             require("dap").run({

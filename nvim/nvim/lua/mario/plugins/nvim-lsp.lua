@@ -14,11 +14,11 @@ return {
             capabilities = capabilities
         })
 
-        vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-        vim.keymap.set('n', 'gr', vim.lsp.buf.references, {})
-        vim.keymap.set('n', 're', vim.lsp.buf.rename, {})
-        vim.keymap.set('n', '<leader>de', vim.lsp.buf.declaration, {})
-        vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
+        vim.keymap.set('n', '<leader>lh', vim.lsp.buf.hover, {desc="lsp hover"})
+        vim.keymap.set('n', '<leader>ld', vim.lsp.buf.definition, {desc="lsp definition"})
+        vim.keymap.set('n', '<leader>lr', vim.lsp.buf.references, {desc="lsp references"})
+        vim.keymap.set('n', '<leader>lrr', vim.lsp.buf.rename, {desc="lsp rename"})
+        vim.keymap.set('n', '<leader>ldd', vim.lsp.buf.declaration, {desc="lsp declaration"})
+        vim.keymap.set('n', '<leader>lc', vim.lsp.buf.code_action, {desc="lsp code action"})
     end,
 }
