@@ -51,8 +51,8 @@ return {
 			["h"] = { vim.lsp.buf.hover, "Hover" },
 			["d"] = { vim.lsp.buf.definition, "Go to Definition" },
 			["r"] = { vim.lsp.buf.references, "Find References" },
-			["rr"] = { vim.lsp.buf.rename, "Rename" },
-			["dd"] = { vim.lsp.buf.declaration, "Go to Declaration" },
+			["re"] = { vim.lsp.buf.rename, "Rename" },
+			["de"] = { vim.lsp.buf.declaration, "Go to Declaration" },
 			["c"] = { vim.lsp.buf.code_action, "Code Action" },
 		},
 		-- Format and Neotree

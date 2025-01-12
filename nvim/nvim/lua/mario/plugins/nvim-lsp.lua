@@ -17,8 +17,8 @@ return {
         vim.keymap.set('n', '<leader>lh', vim.lsp.buf.hover, {desc="lsp hover"})
         vim.keymap.set('n', '<leader>ld', vim.lsp.buf.definition, {desc="lsp definition"})
         vim.keymap.set('n', '<leader>lr', vim.lsp.buf.references, {desc="lsp references"})
-        vim.keymap.set('n', '<leader>lrr', vim.lsp.buf.rename, {desc="lsp rename"})
-        vim.keymap.set('n', '<leader>ldd', vim.lsp.buf.declaration, {desc="lsp declaration"})
+        vim.keymap.set('n', '<leader>lre', vim.lsp.buf.rename, {desc="lsp rename"})
+        vim.keymap.set('n', '<leader>lde', vim.lsp.buf.declaration, {desc="lsp declaration"})
         vim.keymap.set('n', '<leader>lc', vim.lsp.buf.code_action, {desc="lsp code action"})
     end,
 }
