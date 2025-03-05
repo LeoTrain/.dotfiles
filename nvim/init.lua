@@ -1,3 +1,2 @@
-require("ft_leo")
-print("hello from the start")
-
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
