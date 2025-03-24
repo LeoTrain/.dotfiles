@@ -220,6 +220,7 @@ return {
 			bashls = {},
 			clangd = {},
 			pyright = {},
+			omnisharp = {},
 		}
 
 		-- Ensure the servers and tools above are installed
