@@ -18,4 +18,5 @@ map("n", "<leader>2", function() require("harpoon.ui").nav_file(2) end, "Navigat
 map("n", "<leader>3", function() require("harpoon.ui").nav_file(3) end, "Navigate file 3")
 map("n", "<leader>4", function() require("harpoon.ui").nav_file(4) end, "Navigate file 4")
 map("n", "<leader>5", function() require("harpoon.ui").nav_file(5) end, "Navigate file 5")
+map("n", "<leader>h", "<cmd>Stdheader<CR>", "Insert 42 header")
 --

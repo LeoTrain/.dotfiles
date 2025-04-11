@@ -1,4 +1,5 @@
 {
+  "42-header.nvim": { "branch": "main", "commit": "2720bcd70f6a31e0b2ad7f4e88aeb19da279a73b" },
   "blink.cmp": { "branch": "main", "commit": "cb5e346d9e0efa7a3eee7fd4da0b690c48d2a98e" },
   "conform.nvim": { "branch": "master", "commit": "eebc724d12c5579d733d1f801386e0ceb909d001" },
   "dressing.nvim": { "branch": "master", "commit": "2d7c2db2507fa3c4956142ee607431ddb2828639" },
