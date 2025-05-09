@@ -1,2 +1,0 @@
-require("ftleo")
-print("hello")
