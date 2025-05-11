@@ -24,7 +24,8 @@
     "spacing": 10
   },
   "clock": {
-    "timezone": "America/Sao_Paulo",
+	"interval": 1,
+    "timezone": "Europe/Austria",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "{:%d/%m/%Y - %H:%M:%S}"
   },
