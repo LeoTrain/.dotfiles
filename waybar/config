@@ -37,9 +37,11 @@
     "tooltip": false
   },
   "battery": {
+	  "interval": 1,
 	  "format": "{icon} {capacity}%",
 	  "format-icons": { 
-			"default": ["󰁺", "󰁽", "󰂀", "󰁹"] 
+			"default": ["󰁺", "󰁽", "󰂀", "󰁹"],
+			"charging": "󰂄"
 		},
   },
   "cpu": {
